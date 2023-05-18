@@ -10,7 +10,7 @@
 
 - name: play variables from file
   hosts: localhost
-  vars_file:
+  vars_files:
     - var.yml
   tasks:
     - name: print play variable
