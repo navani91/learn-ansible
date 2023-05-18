@@ -17,12 +17,11 @@
       ansible.builtin.debug:
         msg: URL = {{ URL }}
 
-- name: Task Level Variables
-  hosts: localhost
+- name: vars from Inventory
+  hosts: all
   tasks:
-    - name: print play variable from File
-      vars: ## this vars are only for this task, next task on same play cannot access it
-        URL: task.example.com
+    - name: print play variable from Inventory
       ansible.builtin.debug:
         msg: URL = {{ URL }}
+
 
