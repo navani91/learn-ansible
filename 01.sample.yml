@@ -1,0 +1,6 @@
+- name: Demo play1
+  hosts: all
+  tasks:
+    - name: print Hello
+      ansible.bulitin.debug:
+         msg: Hello World Testing !!
